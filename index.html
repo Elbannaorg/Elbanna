@@ -22,9 +22,8 @@
             text-align: center;
             width: 100%;
         }
-        h1 {
+        h1, h2 {
             color: lightblue;
-            font-size: 2rem;
             margin-bottom: 10px;
         }
         .description {
@@ -43,9 +42,15 @@
             font-size: 1.5em;
             color: gold;
         }
-        stripe-buy-button {
+        iframe {
+            margin-top: 20px;
             width: 100%;
-            max-width: 300px;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
+        .projects {
+            margin-top: 40px;
         }
         @media (max-width: 768px) {
             h1 {
@@ -56,9 +61,6 @@
             }
             .price {
                 font-size: 1.3rem;
-            }
-            stripe-buy-button {
-                max-width: 100%;
             }
         }
         @media (max-width: 480px) {
@@ -80,6 +82,7 @@
         <h1>Support Blockchain Innovation</h1>
         <p class="description">We are conducting a Regulation D 506(c) offering with a $25,000 minimum investment. The funds will go directly toward research and development in blockchain technology, driving innovation in decentralized systems.</p>
         <p class="description">Learn more in our <a href="https://www.sec.gov/Archives/edgar/data/1827189/000182718920000001/xslFormDX01/primary_doc.xml" target="_blank">SEC filing</a>.</p>
+        
         <div class="product">
             <h2>Blockchain Innovation Fund</h2>
             <p class="price">Minimum Investment: $25,000</p>
@@ -87,6 +90,19 @@
                 buy-button-id="buy_btn_1QRi4YG1IWJAmOVegt4n4G0C"
                 publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
             </stripe-buy-button>
+        </div>
+
+        <iframe 
+            src="https://www.youtube.com/embed/C8dmpfUmN9c?autoplay=1&mute=0" 
+            allow="autoplay; encrypted-media">
+        </iframe>
+
+        <div class="projects">
+            <h2>Projects Under Construction</h2>
+            <iframe 
+                src="https://www.youtube.com/embed/3ZZJGKhnuZo?autoplay=1&mute=0" 
+                allow="autoplay; encrypted-media">
+            </iframe>
         </div>
     </div>
 </body>
