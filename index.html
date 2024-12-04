@@ -1,1 +1,65 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Elbanna's Official Website for Web Development and Services">
+  <meta name="author" content="Alex Elbanna">
+  <meta name="keywords" content="Web Development, SEO, Branding, Alex Elbanna">
+  <title>Elbanna.org - Web Development Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+    }
+    header img {
+      max-height: 100px;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #111;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="your-logo.png" alt="Elbanna.org Logo">
+    <h1>Elbanna.org</h1>
+  </header>
+  <div class="container">
+    <h2>Subscribe to Our Monthly Plan</h2>
+    <p>Support our services and get exclusive benefits by subscribing to our monthly plan.</p>
+    <!-- Stripe Buy Button -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1QSON3G1IWJAmOVejEIR9DpO"
+      publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
+    </stripe-buy-button>
+  </div>
+  <footer>
+    Web design by <a href="https://elbanna.org" style="color: #3498db;">Elbanna.org</a> | Mission: Achieving the Sveriges Riksbank Prize in Economic Sciences
+  </footer>
+</body>
+</html>
