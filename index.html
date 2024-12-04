@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Subscribe to Elbanna.org for exclusive benefits and services.">
-  <meta name="author" content="Alex Elbanna">
-  <title>Subscribe to Elbanna.org</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #000;
-      color: #fff;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    header img {
-      max-width: 150px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin: 10px 0;
-    }
-    p {
-      font-size: 1.2rem;
-      margin: 10px 0 20px;
-    }
-    .stripe-button-container {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elbanna Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .invoice {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border: 1px solid #b3d7ff;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="your-logo.png" alt="Elbanna.org Logo">
-    <h1>Subscribe to Elbanna.org</h1>
-    <p>Join our monthly plan for exclusive access to services and updates.</p>
-  </header>
-  
-  <div class="stripe-button-container">
-    <!-- Stripe Buy Button -->
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <stripe-buy-button
-      buy-button-id="buy_btn_1QSON3G1IWJAmOVejEIR9DpO"
-      publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
-    </stripe-buy-button>
-  </div>
+    <div class="container">
+        <h1>Elbanna Innovation Hub</h1>
+        <p>Invest in the future of innovation! Use the payment link below to complete your investment.</p>
+        
+        <div id="payment-section">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+                buy-button-id="buy_btn_1QRi4YG1IWJAmOVegt4n4G0C"
+                publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
+            </stripe-buy-button>
+        </div>
+
+        <div class="invoice">
+            <h2>Your Invoice</h2>
+            <p><strong>Invoice Number:</strong> <span id="order-number">1</span></p>
+            <p><strong>Amount:</strong> $25,000</p>
+            <p><strong>Email:</strong> <span id="customer-email">info@elbanna.org</span></p>
+        </div>
+
+        <a href="#" class="btn" onclick="generateOrder()">Refresh Invoice</a>
+    </div>
+
+    <script>
+        let orderCount = 1;
+
+        // Generate a new invoice with incrementing order number
+        function generateOrder() {
+            orderCount++;
+            document.getElementById("order-number").textContent = orderCount;
+            document.getElementById("customer-email").textContent = "info@elbanna.org";
+        }
+    </script>
 </body>
 </html>
