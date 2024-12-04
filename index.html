@@ -3,54 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alex Elbanna's Official Website for Web Development and Services">
+  <meta name="description" content="Subscribe to Elbanna.org for exclusive benefits and services.">
   <meta name="author" content="Alex Elbanna">
-  <meta name="keywords" content="Web Development, SEO, Branding, Alex Elbanna">
-  <title>Elbanna.org - Web Development Services</title>
+  <title>Subscribe to Elbanna.org</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #000;
+      color: #fff;
     }
     header {
-      padding: 20px;
       text-align: center;
-      background: #111;
+      margin-bottom: 20px;
     }
     header img {
-      max-height: 100px;
+      max-width: 150px;
     }
-    .container {
-      padding: 20px;
-      text-align: center;
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0;
     }
-    button {
-      background-color: #3498db;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
     }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #111;
-      font-size: 12px;
+    .stripe-button-container {
+      display: flex;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="directory_explorer-5.png" alt="Elbanna.org Logo">
-    <h1>Elbanna.org</h1>
+    <img src="your-logo.png" alt="Elbanna.org Logo">
+    <h1>Subscribe to Elbanna.org</h1>
+    <p>Join our monthly plan for exclusive access to services and updates.</p>
   </header>
-  <div class="container">
-    <h2>Subscribe to Our Monthly Plan</h2>
-    <p>Support our services and get exclusive benefits by subscribing to our monthly plan.</p>
+  
+  <div class="stripe-button-container">
     <!-- Stripe Buy Button -->
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <stripe-buy-button
@@ -58,8 +55,5 @@
       publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
     </stripe-buy-button>
   </div>
-  <footer>
-    Web design by <a href="https://elbanna.org" style="color: #3498db;">Elbanna.org</a> | Mission: Achieving the Sveriges Riksbank Prize in Economic Sciences
-  </footer>
 </body>
 </html>
