@@ -101,6 +101,31 @@
             text-decoration: none;
         }
 
+        /* SEC Filing Section */
+        .sec-filing {
+            padding: 60px 20px;
+            background-color: #eef2f7;
+            text-align: center;
+        }
+        .sec-filing h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .sec-filing p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .sec-filing-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
         /* Footer */
         footer {
             background-color: #333;
@@ -138,22 +163,18 @@
     <section class="investment" id="investment">
         <h2>How to Invest</h2>
         <p>Take part in shaping the future by investing in Elbanna Innovation Hub. With a $25,000 investment, you can own shares and be part of an exciting new chapter in global development. The future is bright, and we want you on board.</p>
-    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1QRiYNG1IWJAmOVeQ5wOu84l"
-  publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM"
->
-</stripe-buy-button>
-
-        <!-- Pay with Crypto Section -->
         <h3>Pay with Crypto</h3>
         <p>For those who prefer cryptocurrency, we offer an easy and secure way to invest with our crypto payment option.</p>
         <div class="crypto-button-container">
             <a href="https://nowpayments.io/pos-terminal/elbanna" class="crypto-button" target="_blank">Pay with Crypto</a>
         </div>
+    </section>
+
+    <!-- SEC Filing Section -->
+    <section class="sec-filing">
+        <h2>SEC Filing</h2>
+        <p>We maintain transparency in our operations. View our official SEC filing below.</p>
+        <a href="https://www.sec.gov/Archives/edgar/data/1827189/000182718920000001/xslFormDX01/primary_doc.xml" target="_blank" class="sec-filing-button">View SEC Filing</a>
     </section>
 
     <!-- Footer -->
