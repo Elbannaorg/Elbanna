@@ -3,201 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elbanna Innovation Hub</title>
+    <title>Elbanna Innovation Hub | Alex Elbanna</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Elbanna Innovation Hub by Alex Elbanna offers blockchain development, SEC filings, cryptocurrency funding, and innovative solutions.">
+    <meta name="keywords" content="Alex Elbanna, Alexander Elbanna, Elbanna.org, blockchain development, Raptoreum funding, innovation hub, cryptocurrency, SEC filing, Stripe Checkout">
+    <meta name="author" content="Alex Elbanna">
+    <link rel="icon" href="directory_explorer-5.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-        }
-        h1, h2, h3 {
-            font-weight: 600;
-        }
-        
-        /* Header Styles */
-        header {
-            background: #0061f2; /* Coinbase Blue */
-            padding: 20px 0;
-            color: white;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0061f2, #3a8ee6);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        .hero h2 {
-            font-size: 2.5em;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-        .cta-button {
-            background-color: #f1c40f;
-            color: white;
-            padding: 15px 25px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #333; }
+        a { text-decoration: none; color: inherit; }
 
-        /* About Section */
-        .about {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        .about h2 {
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .about p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
+        /* Header and Navbar */
+        header { background-color: #003366; padding: 10px 20px; color: white; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { width: 120px; cursor: pointer; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; transition: color 0.3s; }
+        nav ul li a:hover { color: #00bcd4; }
+        .menu-toggle { display: none; cursor: pointer; }
+        .menu-toggle div { width: 25px; height: 3px; background-color: white; margin: 5px; }
 
-        /* Investment Section */
-        .investment {
-            background-color: #003366;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .investment h2 {
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .investment p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
+        /* Sections */
+        section { padding: 40px 20px; text-align: center; }
+        h2 { color: #003366; margin-bottom: 20px; }
 
-        /* Crypto Payment Button */
-        .crypto-button-container {
-            margin-top: 20px;
-        }
-        .crypto-button {
-            background-color: #28a745; /* Green for Crypto */
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+        /* Profile Section */
+        .profile img { border-radius: 50%; border: 5px solid #00bcd4; width: 150px; margin-bottom: 10px; }
 
-        /* Stripe Buy Button */
-        .stripe-button-container {
-            margin: 40px 0;
+        /* Funding Section */
+        .funding button, .stripe-button {
+            margin: 10px; padding: 10px 20px; background-color: #00bcd4; color: white; border: none; cursor: pointer;
+            transition: background-color 0.3s;
         }
+        button:hover { background-color: #007a99; }
 
-        /* SEC Filing Section */
-        .sec-filing {
-            padding: 60px 20px;
-            background-color: #eef2f7;
-            text-align: center;
-        }
-        .sec-filing h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .sec-filing p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-        .sec-filing-button {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+        /* Ticker */
+        .ticker { background-color: #e3f2fd; padding: 10px; font-weight: bold; }
+        .ticker img { width: 25px; margin-right: 10px; }
+
+        /* YouTube Video */
+        iframe { width: 100%; max-width: 600px; height: 315px; margin: 20px 0; }
+
+        /* SEC Filing */
+        .sec-file a { color: #00bcd4; text-decoration: underline; }
 
         /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
+        footer { background-color: #003366; color: white; text-align: center; padding: 10px; }
+
+        /* Responsive Menu */
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; }
+            .menu-toggle { display: block; }
+            nav ul.active { display: flex; }
         }
     </style>
-    <!-- Stripe Buy Button Script -->
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
-
+    <!-- Header and Navigation -->
     <header>
-        <h1>Elbanna Innovation Hub</h1>
-        <p>Revolutionizing the Future, One Investment at a Time</p>
+        <div class="logo" onclick="window.location.href='https://gecko.mn'">
+            <img src="directory_explorer-5.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#funding">Funding</a></li>
+                <li><a href="#sec">SEC Filing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Invest in the Future of Innovation</h2>
-        <p>Join us as we lead the way in cutting-edge technologies and global impact.</p>
-        <a href="#investment" class="cta-button">Start Investing</a>
-    </section>
+    <!-- Live RTM Ticker -->
+    <div class="ticker" id="rtm-ticker">
+        <img src="https://cryptologos.cc/logos/raptoreum-rtm-logo.png" alt="RTM Logo">
+        <span id="rtm-price">Loading RTM Price...</span>
+    </div>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Elbanna Innovation Hub</h2>
-        <p>We are a forward-thinking innovation hub dedicated to developing breakthrough technologies that will transform industries and change lives. Our vision is to create a sustainable ecosystem that drives global growth and fosters collaborative innovation.</p>
-    </section>
-
-    <!-- Investment Section -->
-    <section class="investment" id="investment">
-        <h2>How to Invest</h2>
-        <p>Take part in shaping the future by investing in Elbanna Innovation Hub. With a $25,000 investment, you can own shares and be part of an exciting new chapter in global development. The future is bright, and we want you on board.</p>
-        
-        <!-- Stripe Buy Button -->
-        <div class="stripe-button-container">
-            <stripe-buy-button
-                buy-button-id="buy_btn_1QRi4YG1IWJAmOVegt4n4G0C"
-                publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
-            </stripe-buy-button>
-        </div>
-        
-        <h3>Pay with Crypto</h3>
-        <p>For those who prefer cryptocurrency, we offer an easy and secure way to invest with our crypto payment option.</p>
-        <div class="crypto-button-container">
-            <a href="https://nowpayments.io/pos-terminal/elbanna" class="crypto-button" target="_blank">Pay with Crypto</a>
+    <!-- Profile Section -->
+    <section id="home">
+        <div class="profile">
+            <img src="Untitled design.png" alt="Alex Elbanna">
+            <h2>Welcome to Elbanna Innovation Hub</h2>
+            <p>Driving innovation in blockchain development and project funding.</p>
         </div>
     </section>
 
-    <!-- SEC Filing Section -->
-    <section class="sec-filing">
-        <h2>SEC Filing</h2>
-        <p>We maintain transparency in our operations. View our official SEC filing below.</p>
-        <a href="https://www.sec.gov/Archives/edgar/data/1827189/000182718920000001/xslFormDX01/primary_doc.xml" target="_blank" class="sec-filing-button">View SEC Filing</a>
+    <!-- YouTube Video -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Watch our story to learn more:</p>
+        <iframe src="https://www.youtube.com/embed/C8dmpfUmN9c?feature=shared" allowfullscreen></iframe>
+    </section>
+
+    <!-- Funding Section -->
+    <section id="funding">
+        <h2>Support Our Projects</h2>
+        <p>Contribute to our innovative projects and help us build the future.</p>
+        <button onclick="window.location.href='https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1'">
+            Fund with Raptoreum
+        </button>
+        <form action="https://checkout.stripe.com/pay/your-stripe-link" method="GET">
+            <button type="submit" class="stripe-button">Pay with Stripe</button>
+        </form>
+    </section>
+
+    <!-- SEC Filing -->
+    <section id="sec">
+        <h2>SEC Compliance</h2>
+        <p>Transparency and trust are our priorities.</p>
+        <div class="sec-file">
+            <a href="your-sec-filing.pdf" download>Download Our SEC Filing</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Elbanna Innovation Hub. All rights reserved.</p>
-        <p>Contact: info@elbanna.org</p>
+        <p>&copy; 2024 Elbanna Innovation Hub. Built by Alex Elbanna.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script>
+        // Responsive Menu
+        function toggleMenu() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+        }
+
+        // RTM Live Ticker
+        async function fetchRTMPrice() {
+            const rtmPrice = document.getElementById('rtm-price');
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=raptoreum&vs_currencies=usd,btc');
+                const data = await response.json();
+                const priceUSD = data.raptoreum.usd;
+                const priceBTC = data.raptoreum.btc;
+
+                rtmPrice.textContent = `RTM: $${priceUSD} | ${priceBTC} BTC`;
+            } catch (error) {
+                rtmPrice.textContent = "Failed to load RTM price.";
+            }
+        }
+
+        fetchRTMPrice();
+        setInterval(fetchRTMPrice, 60000); // Refresh every 60 seconds
+    </script>
 </body>
 </html>
