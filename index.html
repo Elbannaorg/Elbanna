@@ -101,6 +101,11 @@
             text-decoration: none;
         }
 
+        /* Stripe Buy Button */
+        .stripe-button-container {
+            margin: 40px 0;
+        }
+
         /* SEC Filing Section */
         .sec-filing {
             padding: 60px 20px;
@@ -138,6 +143,8 @@
             font-size: 0.9em;
         }
     </style>
+    <!-- Stripe Buy Button Script -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
 
@@ -163,6 +170,15 @@
     <section class="investment" id="investment">
         <h2>How to Invest</h2>
         <p>Take part in shaping the future by investing in Elbanna Innovation Hub. With a $25,000 investment, you can own shares and be part of an exciting new chapter in global development. The future is bright, and we want you on board.</p>
+        
+        <!-- Stripe Buy Button -->
+        <div class="stripe-button-container">
+            <stripe-buy-button
+                buy-button-id="buy_btn_1QRi4YG1IWJAmOVegt4n4G0C"
+                publishable-key="pk_live_51QOgSGG1IWJAmOVe0cWtnD9KsSTrqMZn44BP6tiZg7kmUB4GikcUTB6ZBvUcjgKYo4KaIuG3zf83Z1eI9qUFFdCB00BrZl1dAM">
+            </stripe-buy-button>
+        </div>
+        
         <h3>Pay with Crypto</h3>
         <p>For those who prefer cryptocurrency, we offer an easy and secure way to invest with our crypto payment option.</p>
         <div class="crypto-button-container">
